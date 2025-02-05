@@ -1,0 +1,37 @@
+@model IEnumerable<Movie>
+
+<h2 class="mb-4">🎥 Movie List</h2>
+
+<a asp-controller="Movie" asp-action="Create" class="btn btn-success mb-3">➕ Add Movie</a>
+<hr>
+
+<table class="table table-hover table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.MovieId)</th>
+            <th>@Html.DisplayNameFor(m => m.MovieName)</th>
+            <th>@Html.DisplayNameFor(m => m.MovieGenre)</th>
+            <th>@Html.DisplayNameFor(m => m.ReleaseDate)</th>
+            <th>@Html.DisplayNameFor(m => m.Director)</th>
+            <th>@Html.DisplayNameFor(m => m.Point)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.MovieId)</td>
+                <td>@Html.DisplayFor(modelItem => item.MovieName)</td>
+                <td>@Html.DisplayFor(modelItem => item.MovieGenre)</td>
+                <td>@Html.DisplayFor(modelItem => item.ReleaseDate)</td>    
+                <td>@Html.DisplayFor(modelItem => item.Director)</td>
+                <td>@Html.DisplayFor(modelItem => item.Point)</td>
+                <td>
+                    <a asp-controller="Movie" asp-action="Update" asp-route-id="@item.MovieId" class="btn btn-warning btn-sm">✏️ Edit</a>
+                    <a asp-controller="Movie" asp-action="Delete" asp-route-id="@item.MovieId" class="btn btn-danger btn-sm">🗑️ Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

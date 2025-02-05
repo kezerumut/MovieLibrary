@@ -1,0 +1,38 @@
+@model Movie  
+
+<h3 class="mb-4">🎬 Add Movie</h3>
+
+<form asp-action="Create" asp-controller="Movie" method="post">
+    <div class="mb-3">
+        <label asp-for="MovieName" class="form-label fw-bold">Movie Name</label>
+        <input asp-for="MovieName" class="form-control" placeholder="Enter Movie Name">
+        <span asp-validation-for="MovieName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="MovieGenre" class="form-label fw-bold">Movie Genre</label>
+        <input asp-for="MovieGenre" class="form-control" placeholder="Enter Movie Genre">
+        <span asp-validation-for="MovieGenre" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ReleaseDate" class="form-label fw-bold">Release Date</label>
+        <input asp-for="ReleaseDate" class="form-control" type="Date">
+        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Director" class="form-label fw-bold">Director</label>
+        <input asp-for="Director" class="form-control" placeholder="Enter Director Name">
+        <span asp-validation-for="Director" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Point" class="form-label fw-bold">Point</label>
+        <input asp-for="Point" class="form-control" placeholder="Enter Rating (0-10)">
+        <span asp-validation-for="Point" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">💾 Save</button>
+    <a asp-action="Index" asp-controller="Movie" class="btn btn-secondary" style="margin-top: 10px;">Cancel</a>
+</form>
