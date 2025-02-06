@@ -125,3 +125,4 @@ C:\Users\umut1\Desktop\ProjectDB\Backend\MovieDBApp\obj\Debug\net8.0\refint\Movi
 C:\Users\umut1\Desktop\ProjectDB\Backend\MovieDBApp\obj\Debug\net8.0\MovieDBApp.pdb
 C:\Users\umut1\Desktop\ProjectDB\Backend\MovieDBApp\obj\Debug\net8.0\MovieDBApp.genruntimeconfig.cache
 C:\Users\umut1\Desktop\ProjectDB\Backend\MovieDBApp\obj\Debug\net8.0\ref\MovieDBApp.dll
+C:\Users\umut1\Desktop\ProjectDB\Backend\MovieDBApp\obj\Debug\net8.0\MovieDBApp.sourcelink.json
