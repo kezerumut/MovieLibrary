@@ -8,8 +8,12 @@ namespace MovieDBApp.Data{
         public int MovieId {get;set;}
         public string? MovieName {get;set;}
         public string? MovieGenre {get;set;}
-        public string? ReleaseDate {get;set;}
+
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime ReleaseDate { get; set; }
         public string? Director {get;set;}
         public int Point {get;set;}
+
+        public string? ImagePath { get; set; }
     }
 }

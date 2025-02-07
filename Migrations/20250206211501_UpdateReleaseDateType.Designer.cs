@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieDBApp.Data;
 
@@ -10,9 +11,11 @@ using MovieDBApp.Data;
 namespace MovieDBApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250206211501_UpdateReleaseDateType")]
+    partial class UpdateReleaseDateType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.1");
@@ -38,9 +41,6 @@ namespace MovieDBApp.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Director")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ImagePath")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MovieGenre")

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<MovieDBApp.Data.Movie>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -7,28 +9,43 @@
     <p class="lead">Explore, manage, and keep track of your favorite movies with our Movie Library system.</p>
 
     <div class="mt-5">
-        <a asp-controller="Movie" asp-action="Index" class="btn btn-primary btn-lg">📜 View Movie List</a>
+        <a asp-controller="Movie" asp-action="Index" class="btn btn-primary btn-lg me-3">📜 View Movie List</a>
         <a asp-controller="Movie" asp-action="Create" class="btn btn-success btn-lg">➕ Add New Movie</a>
     </div>
 </div>
 
 <hr class="my-5">
 
-<div class="row">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">🎥 Manage Your Movies</h5>
-                <p class="card-text">  -Easily add, edit, and delete movies in your collection.</p>
+<h3 class="mb-4">🎥 Movie List</h3>
+
+@if (Model.Any())
+{
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var movie in Model)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 rounded-3">
+                    @if (!string.IsNullOrEmpty(movie.ImagePath))
+                    {
+                        <div style="height: 300px; display: flex; justify-content: center; align-items: center; background-color: #f8f9fa;">
+                            <img src="@movie.ImagePath" alt="@movie.MovieName" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        </div>
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title text-danger fw-bold">@movie.MovieName</h5>
+                        <p class="card-text">
+                            <strong>🎭 Genre:</strong> @movie.MovieGenre <br>
+                            <strong>📅 Release Date:</strong> @movie.ReleaseDate.ToString("yyyy") <br>
+                            <strong>🎬 Director:</strong> @movie.Director <br>
+                            <strong>⭐ Rating:</strong> @movie.Point/10
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
+        }
     </div>
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">⭐ Rate and Review</h5>
-                <p class="card-text">  -Keep track of movie ratings and personal reviews.</p>
-            </div>
-        </div>
-    </div>
-</div>
+}
+else
+{
+    <div class="alert alert-info">No movies found. Add a new movie to get started!</div>
+}

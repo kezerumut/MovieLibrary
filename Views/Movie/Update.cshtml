@@ -1,9 +1,9 @@
-@model Movie  
+@model MovieDBApp.Data.Movie
 
 <h3 class="mb-4">🎬 Update Movie</h3>
 
-<form asp-action="Update" asp-controller="Movie" method="post">
-    <input type="hidden" asp-for="MovieId">
+<form asp-action="Update" asp-controller="Movie" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="MovieId" />
     
     <div class="mb-3">
         <label asp-for="MovieName" class="form-label fw-bold">Movie Name</label>
@@ -19,7 +19,7 @@
 
     <div class="mb-3">
         <label asp-for="ReleaseDate" class="form-label fw-bold">Release Date</label>
-        <input asp-for="ReleaseDate" class="form-control" type="Date">
+        <input asp-for="ReleaseDate" class="form-control" type="date">
         <span asp-validation-for="ReleaseDate" class="text-danger"></span>
     </div>
 
@@ -33,6 +33,18 @@
         <label asp-for="Point" class="form-label fw-bold">Point</label>
         <input asp-for="Point" class="form-control" placeholder="Enter Rating (0-10)">
         <span asp-validation-for="Point" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label fw-bold">Movie Image</label>
+        <input type="file" name="imageFile" class="form-control" accept="image/*">
+        @if (!string.IsNullOrEmpty(Model.ImagePath))
+        {
+            <div class="mt-2"> 
+                <img src="@Model.ImagePath" alt="Current Image" style="max-width: 200px;">
+            </div>
+            <label class="form-label fw-bold">Previous Image</label>    
+        }
     </div>
 
     <button type="submit" class="btn btn-primary" style="margin-top: 10px;">💾 Save</button>

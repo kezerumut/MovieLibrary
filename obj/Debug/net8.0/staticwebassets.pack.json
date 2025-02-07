@@ -13,6 +13,38 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\images\\image 2.jpg",
+      "PackagePath": "staticwebassets\\images\\image 2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\images\\image 3.jpg",
+      "PackagePath": "staticwebassets\\images\\image 3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\images\\image 4.jpg",
+      "PackagePath": "staticwebassets\\images\\image 4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\images\\image 5.jpg",
+      "PackagePath": "staticwebassets\\images\\image 5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\images\\image 6.jpg",
+      "PackagePath": "staticwebassets\\images\\image 6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\images\\image 7.jpg",
+      "PackagePath": "staticwebassets\\images\\image 7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\images\\image.jpg",
+      "PackagePath": "staticwebassets\\images\\image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\images\\images.jpeg",
+      "PackagePath": "staticwebassets\\images\\images.jpeg"
+    },
+    {
       "Id": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

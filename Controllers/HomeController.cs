@@ -1,5 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MovieDBApp.Data;
 using MovieDBApp.Models;
 
 namespace MovieDBApp.Controllers;
@@ -7,15 +9,19 @@ namespace MovieDBApp.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly DataContext _context;
+    
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, DataContext context)
     {
         _logger = logger;
+     _context = context;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> IndexAsync()
     {
-        return View();
+           var filmler = await _context.Movies0.ToListAsync();
+            return View(filmler);
     }
 
     public IActionResult Privacy()
