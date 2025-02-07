@@ -30,7 +30,8 @@ Frontend
 
 Movie Sınıfı: Filmlerin bilgilerini tutar
 
-![image](https://github.com/user-attachments/assets/66e3041f-1ff4-43a9-b63c-8217feaf32fd)
+![image](https://github.com/user-attachments/assets/bbc7ac20-3599-42f4-9a7c-1226f5cebd1a)
+
 
 MovieController: CRUD işlemlerini gerçekleştiren controller.
 
