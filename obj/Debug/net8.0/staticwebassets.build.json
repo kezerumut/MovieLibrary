@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uwrlKzlWzviIchPi9/1IO6/JoZPGSl7b7zjdyVqm5Hg=",
+  "Hash": "64GSJwIsw0Sc7n86qS1Z8wXAdJmUscAhYpnS08Yp688=",
   "Source": "MovieDBApp",
   "BasePath": "_content/MovieDBApp",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\image 7.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\images\\image 8).jpeg",
+      "SourceId": "MovieDBApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\",
+      "BasePath": "_content/MovieDBApp",
+      "RelativePath": "images/image 8).jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\image 8).jpeg"
     },
     {
       "Identity": "C:\\Users\\umut1\\Desktop\\ProjectDB\\Backend\\MovieDBApp\\wwwroot\\images\\image.jpg",
